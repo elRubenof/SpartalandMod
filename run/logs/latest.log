@@ -1,0 +1,139 @@
+[26mar2022 15:22:42.673] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.0, --assetIndex, 1.16, --assetsDir, /Users/ruben/.gradle/caches/forge_gradle/assets, --version, MOD_DEV, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[26mar2022 15:22:42.679] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_302 by Temurin
+[26mar2022 15:22:43.141] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[26mar2022 15:22:43.190] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/Users/ruben/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
+[26mar2022 15:22:43.484] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:105]: 	Description : Cocoa: Failed to find service port for display
+[26mar2022 15:22:43.485] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:106]: 	Stacktrace  :
+[26mar2022 15:22:43.485] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: org.lwjgl.glfw.GLFW.glfwInit(GLFW.java:827)
+[26mar2022 15:22:43.485] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.initWindow(ClientVisualization.java:71)
+[26mar2022 15:22:43.485] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.start(ClientVisualization.java:341)
+[26mar2022 15:22:43.485] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.EarlyProgressVisualization.accept(EarlyProgressVisualization.java:43)
+[26mar2022 15:22:43.486] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.FMLLoader.setupLaunchHandler(FMLLoader.java:190)
+[26mar2022 15:22:43.486] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.FMLServiceProvider.initialize(FMLServiceProvider.java:94)
+[26mar2022 15:22:43.486] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServiceDecorator.onInitialize(TransformationServiceDecorator.java:68)
+[26mar2022 15:22:43.486] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.lambda$initialiseTransformationServices$7(TransformationServicesHandler.java:107)
+[26mar2022 15:22:43.486] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: java.util.HashMap$Values.forEach(HashMap.java:981)
+[26mar2022 15:22:43.487] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.initialiseTransformationServices(TransformationServicesHandler.java:107)
+[26mar2022 15:22:43.487] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.initializeTransformationServices(TransformationServicesHandler.java:59)
+[26mar2022 15:22:43.487] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.Launcher.run(Launcher.java:76)
+[26mar2022 15:22:43.487] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.Launcher.main(Launcher.java:66)
+[26mar2022 15:22:43.487] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108)
+[26mar2022 15:22:43.489] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:105]: 	Description : Cocoa: Failed to find service port for display
+[26mar2022 15:22:43.492] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:106]: 	Stacktrace  :
+[26mar2022 15:22:43.492] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: org.lwjgl.glfw.GLFW.glfwInit(GLFW.java:827)
+[26mar2022 15:22:43.493] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.initWindow(ClientVisualization.java:71)
+[26mar2022 15:22:43.493] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.start(ClientVisualization.java:341)
+[26mar2022 15:22:43.495] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.EarlyProgressVisualization.accept(EarlyProgressVisualization.java:43)
+[26mar2022 15:22:43.495] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.FMLLoader.setupLaunchHandler(FMLLoader.java:190)
+[26mar2022 15:22:43.495] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.FMLServiceProvider.initialize(FMLServiceProvider.java:94)
+[26mar2022 15:22:43.496] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServiceDecorator.onInitialize(TransformationServiceDecorator.java:68)
+[26mar2022 15:22:43.496] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.lambda$initialiseTransformationServices$7(TransformationServicesHandler.java:107)
+[26mar2022 15:22:43.497] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: java.util.HashMap$Values.forEach(HashMap.java:981)
+[26mar2022 15:22:43.497] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.initialiseTransformationServices(TransformationServicesHandler.java:107)
+[26mar2022 15:22:43.497] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.TransformationServicesHandler.initializeTransformationServices(TransformationServicesHandler.java:59)
+[26mar2022 15:22:43.498] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.Launcher.run(Launcher.java:76)
+[26mar2022 15:22:43.498] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: cpw.mods.modlauncher.Launcher.main(Launcher.java:66)
+[26mar2022 15:22:43.498] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108)
+[26mar2022 15:22:43.502] [main/ERROR] [net.minecraftforge.fml.loading.progress.ClientVisualization/]: Suppressing Last GLFW error: [0x10008]Cocoa: Failed to find service port for display
+[26mar2022 15:22:46.539] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/ruben/.gradle/caches/forge_gradle/assets, --assetIndex, 1.16, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[26mar2022 15:22:46.923] [main/INFO] [mixin/]: Remapping refMap Pehkui-refmap.json using /Users/ruben/Development/forge/build/createSrgToMcp/output.srg
+[26mar2022 15:22:48.699] [main/WARN] [mixin/]: Error loading class: net/minecraft/block/entity/LecternBlockEntity$1 (java.lang.ClassNotFoundException: null)
+[26mar2022 15:22:48.707] [main/WARN] [mixin/]: @Mixin target net.minecraft.block.entity.LecternBlockEntity$1 was not found pehkui.mixins.json:LecternBlockEntityMixin
+[26mar2022 15:22:48.988] [main/WARN] [mixin/]: Error loading class: net/minecraft/block/entity/LecternBlockEntity$1 (java.lang.ClassNotFoundException: null)
+[26mar2022 15:22:48.989] [main/WARN] [mixin/]: @Mixin target net.minecraft.block.entity.LecternBlockEntity$1 was not found pehkui.mixins.json:reach.LecternBlockEntityMixin
+[26mar2022 15:22:50.363] [main/FATAL] [mixin/]: Mixin apply failed pehkui.mixins.json:PlayerEntityMixin -> net.minecraft.entity.player.PlayerEntity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on onGetBlockBreakingSpeed could not find any targets matching  in net.minecraft.entity.player.PlayerEntity. Using refmap Pehkui-refmap.json [PREINJECT Applicator Phase -> pehkui.mixins.json:PlayerEntityMixin -> Prepare Injections ->  -> handler$zbk000$onGetBlockBreakingSpeed(Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onGetBlockBreakingSpeed could not find any targets matching  in net.minecraft.entity.player.PlayerEntity. Using refmap Pehkui-refmap.json [PREINJECT Applicator Phase -> pehkui.mixins.json:PlayerEntityMixin -> Prepare Injections ->  -> handler$zbk000$onGetBlockBreakingSpeed(Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findMethods(InjectionInfo.java:572) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:288) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:275) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:267) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_302]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_302]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_302]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_302]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:140) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:624) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1247) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1033) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:388) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:320) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:345) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:569) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:223) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformationHandler.processClass(MixinTransformationHandler.java:121) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at org.spongepowered.asm.launch.MixinLaunchPlugin.processClass(MixinLaunchPlugin.java:131) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown]
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:154) ~[modlauncher-8.0.9.jar:8.0.9+86+master.3cf110c]
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:85) ~[modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:265) ~[modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.0.9.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_302]
+	at net.minecraft.client.main.Main.main(Main.java:118) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_302]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+[26mar2022 15:22:50.396] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+[26mar2022 15:22:50.397] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:39)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1052]: 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: Caused by: java.lang.reflect.InvocationTargetException
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at java.lang.reflect.Method.invoke(Method.java:498)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+[26mar2022 15:22:50.398] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1061]: 	... 5 more
+[26mar2022 15:22:50.399] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+[26mar2022 15:22:50.399] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363)
+[26mar2022 15:22:50.400] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:223)
+[26mar2022 15:22:50.400] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at org.spongepowered.asm.mixin.transformer.MixinTransformationHandler.processClass(MixinTransformationHandler.java:121)
+[26mar2022 15:22:50.400] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at org.spongepowered.asm.launch.MixinLaunchPlugin.processClass(MixinLaunchPlugin.java:131)
+[26mar2022 15:22:50.400] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:154)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:85)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:265)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	at net.minecraft.client.main.Main.main(Main.java:118)
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:644]: 	... 11 more
+[26mar2022 15:22:50.401] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:668]: Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [pehkui.mixins.json:PlayerEntityMixin] from phase [DEFAULT] in config [pehkui.mixins.json] FAILED during APPLY
+[26mar2022 15:22:50.402] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:668]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:642)
+[26mar2022 15:22:50.403] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:668]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:594)
+[26mar2022 15:22:50.404] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:668]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:356)
+[26mar2022 15:22:50.404] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:668]: 	... 22 more
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on onGetBlockBreakingSpeed could not find any targets matching  in net.minecraft.entity.player.PlayerEntity. Using refmap Pehkui-refmap.json [PREINJECT Applicator Phase -> pehkui.mixins.json:PlayerEntityMixin -> Prepare Injections ->  -> handler$zbk000$onGetBlockBreakingSpeed(Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse]
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.findMethods(InjectionInfo.java:572)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:288)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:275)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:267)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:46)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:140)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:624)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1247)
+[26mar2022 15:22:50.405] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:1033)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:388)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:320)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:345)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:569)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+[26mar2022 15:22:50.406] [main/INFO] [STDERR/]: [java.lang.Throwable:printEnclosedStackTrace:710]: 	... 22 more

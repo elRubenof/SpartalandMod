@@ -1,0 +1,9 @@
+{
+  "earthquake": {
+    "category": "blocks",
+    "subtitle": "spartaland.earthquake",
+    "sounds": [
+      "spartaland:earthquake"
+    ]
+  }
+}
