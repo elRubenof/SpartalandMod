@@ -36,7 +36,7 @@ public class Utils {
     }
 
     public static String getVersion() throws IOException {
-        URL url = new URL("https://raw.githubusercontent.com/jordsta95/ArcaneArteries/master/aaversion.txt");
+        URL url = new URL("https://raw.githubusercontent.com/elRubenof/SpartalandMod/main/VERSION.txt");
         String RR = "";
 
         BufferedReader in = new BufferedReader(
