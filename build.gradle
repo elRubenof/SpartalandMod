@@ -4,20 +4,9 @@ buildscript {
         maven {
             url = 'https://maven.minecraftforge.net'
         }
-        maven {
-            name = 'JitPack'
-            url = 'https://jitpack.io'
-        }
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-    }
-}
-
-repositories {
-    maven {
-        name = 'JitPack'
-        url = 'https://jitpack.io'
     }
 }
 
@@ -26,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-1.1'
+version = '1.16.5-1.2'
 group = 'com.bcr.spartaland' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'spartaland'
 
@@ -141,8 +130,6 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
-
-    implementation("com.github.Virtuoel:Pehkui:${pehkui_version}")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

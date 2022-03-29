@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Specification-Title: spartaland
 Specification-Vendor: spartalandsareus
 Specification-Version: 1
-Implementation-Title: forge
-Implementation-Version: 1.16.5-1.1
+Implementation-Title: SpartalandMod
+Implementation-Version: 1.16.5-1.2
 Implementation-Vendor: spartalandsareus
-Implementation-Timestamp: 2022-03-13T17:38:12+0100
+Implementation-Timestamp: 2022-03-29T23:56:01+0200
 

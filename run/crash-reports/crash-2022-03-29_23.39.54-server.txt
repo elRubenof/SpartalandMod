@@ -1,0 +1,71 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 29/03/22 23:39
+Description: Ticking memory connection
+
+java.io.FileNotFoundException: https://raw.githubusercontent.com/elRubenof/SpartalandMod/main/VERSION.txt
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1896) ~[?:1.8.0_302] {}
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_302] {}
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268) ~[?:1.8.0_302] {}
+	at java.net.URL.openStream(URL.java:1068) ~[?:1.8.0_302] {}
+	at com.bcr.spartaland.util.Utils.getVersion(Utils.java:43) ~[main/:?] {re:classloading}
+	at com.bcr.spartaland.event.ClientEvents.onLogin(ClientEvents.java:26) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_5_ClientEvents_onLogin_PlayerLoggedInEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.fml.hooks.BasicEventHooks.firePlayerLoggedIn(BasicEventHooks.java:44) ~[forge:?] {re:classloading}
+	at net.minecraft.server.management.PlayerList.placeNewPlayer(PlayerList.java:231) ~[forge:?] {re:classloading}
+	at net.minecraft.network.login.ServerLoginNetHandler.handleAcceptedLogin(ServerLoginNetHandler.java:118) ~[forge:?] {re:classloading}
+	at net.minecraft.network.login.ServerLoginNetHandler.tick(ServerLoginNetHandler.java:65) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:222) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:134) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:865) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (x86_64) version 10.16
+	Java Version: 1.8.0_302, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 1061929280 bytes (1012 MB) / 1867513856 bytes (1781 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 8
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -Xss1M
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.0
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Spartaland Mod                |spartaland                    |NONE                |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.|Forge                         |forge                         |36.2.0              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 31d9d2d2-703c-4d6f-96ff-ca58da5a9494
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/1, l='ServerLevel[Mundo nuevo]', x=-1193.49, y=33.00, z=-1713.99]]
+	Data Packs: vanilla, mod:spartaland, mod:forge
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'
