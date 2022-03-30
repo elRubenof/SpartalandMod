@@ -6,6 +6,7 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import java.io.BufferedReader;
@@ -15,22 +16,23 @@ import java.net.URL;
 
 public class Utils {
 
-    public static void houseTeleport(InputUpdateEvent event) {
-        PlayerEntity player = event.getPlayer();
+    public static void houseTeleport(TickEvent.PlayerTickEvent event) {
+        PlayerEntity player = event.player;
+        boolean sneak = player.isShiftKeyDown();
         Vector3d pos = player.position();
         boolean shift = player.getPersistentData().getBoolean(Spartaland.MOD_ID + "shift");
 
         Vector3d min = new Vector3d(-1199,0,-1717);
         Vector3d max = new Vector3d(-1186,0,-1712);
 
-        if (event.getMovementInput().shiftKeyDown && !shift) {
+        if (!shift && sneak) {
             player.getPersistentData().putBoolean(Spartaland.MOD_ID + "shift", true);
 
             if (pos.x > min.x && pos.x < max.x && pos.z > min.z && pos.z < max.z && (pos.y == 71 || pos.y == 33)) {
                 player.moveTo(pos.x, pos.y == 71 ? 33 : 71, pos.z);
             }
 
-        } else if (!event.getMovementInput().shiftKeyDown && shift) {
+        } else if (!sneak && shift) {
             player.getPersistentData().putBoolean(Spartaland.MOD_ID + "shift", false);
         }
     }

@@ -13,6 +13,7 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.server.command.ConfigCommand;
@@ -33,7 +34,7 @@ public class CommonEvents {
     }
 
     @SubscribeEvent
-    public static void onInputUpdate(InputUpdateEvent event) {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Utils.houseTeleport(event);
     }
 }
