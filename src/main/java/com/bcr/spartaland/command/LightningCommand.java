@@ -28,6 +28,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Collection;
+import java.util.Objects;
 import java.util.UUID;
 
 public class LightningCommand {
@@ -40,15 +41,15 @@ public class LightningCommand {
             return context.hasPermission(2);
         }).then(Commands.argument("target", EntityArgument.entities()).executes((context) -> {
             for (Entity entity : EntityArgument.getEntities(context, "target")) {
-                return spawnEntity(context.getSource(), entity.position());
+                return spawnEntity(context.getSource().getLevel(), entity.position(), context.getSource());
             }
             return 1;
         })).then(Commands.argument("position", Vec3Argument.vec3()).executes((context) -> {
-            return spawnEntity(context.getSource(), Vec3Argument.getVec3(context, "position"));
+            return spawnEntity(context.getSource().getLevel(), Vec3Argument.getVec3(context, "position"), context.getSource());
         })));
     }
 
-    private static int spawnEntity(CommandSource p_198737_0_, Vector3d p_198737_2_) throws CommandSyntaxException {
+    public static int spawnEntity(ServerWorld p_198737_0_, Vector3d p_198737_2_, CommandSource source) throws CommandSyntaxException {
         BlockPos blockpos = new BlockPos(p_198737_2_);
         if (!World.isInSpawnableBounds(blockpos)) {
             throw INVALID_POSITION.create();
@@ -70,7 +71,9 @@ public class LightningCommand {
                 if (!serverworld.tryAddFreshEntityWithPassengers(entity)) {
                     throw ERROR_DUPLICATE_UUID.create();
                 } else {
-                    p_198737_0_.sendSuccess(new TranslationTextComponent("Lanzaste un rayo"), true);
+                    if (!Objects.isNull(source)) {
+                        source.sendSuccess(new TranslationTextComponent("Lanzaste un rayo"), true);
+                    }
                     return 1;
                 }
             }

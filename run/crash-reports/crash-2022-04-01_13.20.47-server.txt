@@ -1,0 +1,131 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 1/04/22 13:20
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at com.bcr.spartaland.event.ClientEvents.PlayerHurt(ClientEvents.java:48) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_6_ClientEvents_PlayerHurt_LivingDamageEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDamage(ForgeHooks.java:369) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1483) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.hurt(AnimalEntity.java:73) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.outOfWorld(LivingEntity.java:1705) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.Entity.baseTick(Entity.java:433) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.baseTick(LivingEntity.java:295) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.baseTick(MobEntity.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.tick(Entity.java:386) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2113) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.bcr.spartaland.event.ClientEvents.PlayerHurt(ClientEvents.java:48) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_6_ClientEvents_PlayerHurt_LivingDamageEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDamage(ForgeHooks.java:369) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.actuallyHurt(LivingEntity.java:1483) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.hurt(LivingEntity.java:984) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.hurt(AnimalEntity.java:73) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.outOfWorld(LivingEntity.java:1705) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.Entity.baseTick(Entity.java:433) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.baseTick(LivingEntity.java:295) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.baseTick(MobEntity.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.Entity.tick(Entity.java:386) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2113) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tickNonPassenger(ServerWorld.java:611) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:sheep (net.minecraft.entity.passive.SheepEntity)
+	Entity ID: 21
+	Entity Name: Oveja
+	Entity's Exact location: -1183.82, -65.33, -1715.04
+	Entity's Block location: World: (-1184,-66,-1716), Chunk: (at 0,-5,12 in -74,-108; contains blocks -1184,0,-1728 to -1169,255,-1713), Region: (-3,-4; contains chunks -96,-128 to -65,-97, blocks -1536,0,-2048 to -1025,255,-1537)
+	Entity's Momentum: 0.00, -2.77, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/1, l='ServerLevel[Mundo nuevo]', x=-1187.62, y=33.00, z=-1715.10]]
+	Chunk stats: ServerChunkCache: 4234
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (20,4,5), Chunk: (at 4,0,5 in 1,0; contains blocks 16,0,0 to 31,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 721634 game time, 1000 day time
+	Level name: Mundo nuevo
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:851) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:787) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tickServer(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (x86_64) version 10.16
+	Java Version: 1.8.0_302, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 710441880 bytes (677 MB) / 1810366464 bytes (1726 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 8
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -Xss1M
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.0
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Spartaland Mod                |spartaland                    |NONE                |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.|Forge                         |forge                         |36.2.0              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 5c38e2b8-fd1d-4807-9fab-a1581f108775
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/1, l='ServerLevel[Mundo nuevo]', x=-1187.62, y=33.00, z=-1715.10]]
+	Data Packs: vanilla, mod:spartaland, mod:forge
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

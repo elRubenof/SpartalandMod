@@ -16,8 +16,7 @@ import java.net.URL;
 
 public class Utils {
 
-    public static void houseTeleport(TickEvent.PlayerTickEvent event) {
-        PlayerEntity player = event.player;
+    public static void houseTeleport(PlayerEntity player) {
         boolean sneak = player.isShiftKeyDown();
         Vector3d pos = player.position();
         boolean shift = player.getPersistentData().getBoolean(Spartaland.MOD_ID + "shift");
@@ -28,7 +27,7 @@ public class Utils {
         if (!shift && sneak) {
             player.getPersistentData().putBoolean(Spartaland.MOD_ID + "shift", true);
 
-            if (pos.x > min.x && pos.x < max.x && pos.z > min.z && pos.z < max.z && (pos.y == 71 || pos.y == 33)) {
+            if (pos.x > min.x && pos.x < max.x && pos.z > min.z && pos.z < max.z && (pos.y == 71 || pos.y == 33 && !player.level.isClientSide())) {
                 player.moveTo(pos.x, pos.y == 71 ? 33 : 71, pos.z);
             }
 
