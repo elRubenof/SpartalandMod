@@ -11,6 +11,6 @@ import java.util.Set;
 public class Rhitta extends ToolItem {
 
     public Rhitta() {
-        super(12.0F, -2.0F, ItemTier.NETHERITE, null, new Item.Properties().fireResistant());
+        super(11.0F, -3.0F, ItemTier.NETHERITE, null, new Item.Properties().fireResistant().durability(0));
     }
 }

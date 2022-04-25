@@ -2,26 +2,21 @@ package com.bcr.spartaland.event;
 
 import com.bcr.spartaland.Spartaland;
 import com.bcr.spartaland.util.DistorsionEvent;
+import com.bcr.spartaland.util.RhittaUtils;
 import com.bcr.spartaland.util.Utils;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.world.Dimension;
-import net.minecraft.world.DimensionType;
-import net.minecraft.world.gen.DimensionSettings;
-import net.minecraft.world.storage.IServerWorldInfo;
+import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
+import net.minecraftforge.event.entity.player.ArrowLooseEvent;
+import net.minecraftforge.event.entity.player.ArrowNockEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.io.IOException;
 
 @Mod.EventBusSubscriber(Dist.DEDICATED_SERVER)
 public class ServerEvents {
@@ -29,9 +24,19 @@ public class ServerEvents {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         PlayerEntity player = event.player;
+        ItemStack stack = player.inventory.getSelected();
 
         Utils.houseTeleport(player);
         DistorsionEvent.onVoid(player);
+
+        if (stack.hasTag()) {
+            CompoundNBT nbt = stack.getTag();
+            if (nbt.hasUUID(Spartaland.MOD_ID + ":Owner")) {
+                if(!nbt.getUUID(Spartaland.MOD_ID + ":Owner").equals(player.getUUID())) {
+                    player.drop(stack, true);
+                }
+            }
+        }
     }
 
     @SubscribeEvent
@@ -47,7 +52,23 @@ public class ServerEvents {
     }
 
     @SubscribeEvent
-    public static void onPlayerHurts(LivingDamageEvent event) {
-        DistorsionEvent.onHurtPlayer(event);
+    public static void onItemPickUp(EntityItemPickupEvent event) {
+        PlayerEntity player = event.getPlayer();
+        ItemStack itemStack = event.getItem().getItem();
+        CompoundNBT nbt;
+
+        if (Utils.isLegenday(itemStack.getItem())) {
+            if (itemStack.hasTag()) {
+                nbt = itemStack.getTag();
+            } else {
+                nbt = new CompoundNBT();
+            }
+
+            if (!nbt.hasUUID(Spartaland.MOD_ID + ":Owner")) {
+                nbt.putUUID(Spartaland.MOD_ID + ":Owner", player.getUUID());
+            }
+
+            itemStack.setTag(nbt);
+        }
     }
 }

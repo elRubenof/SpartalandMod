@@ -1,18 +1,35 @@
 package com.bcr.spartaland.util;
 
 import com.bcr.spartaland.Spartaland;
+import com.bcr.spartaland.item.HolyArmorAmulet;
+import com.bcr.spartaland.item.HolyArmorItem;
+import com.bcr.spartaland.item.ModItems;
+import com.bcr.spartaland.item.Rhitta;
+import com.bcr.spartaland.screen.TpSelectorScreen;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Util;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
+import javax.annotation.Nullable;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.Objects;
 
 public class Utils {
 
@@ -58,5 +75,41 @@ public class Utils {
         if (!version.equals(Spartaland.VERSION)) {
             event.getPlayer().sendMessage(ITextComponent.nullToEmpty(updateWarn), event.getPlayer().getUUID());
         }
+    }
+
+    public static void dropArmor(PlayerEntity player, boolean shield) {
+        player.drop(player.getItemBySlot(EquipmentSlotType.HEAD), true);
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.HEAD));
+
+        player.drop(player.getItemBySlot(EquipmentSlotType.CHEST), true);
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.CHEST));
+
+        player.drop(player.getItemBySlot(EquipmentSlotType.LEGS), true);
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.LEGS));
+
+        player.drop(player.getItemBySlot(EquipmentSlotType.FEET), true);
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.FEET));
+
+        if (shield) {
+            player.drop(player.getItemBySlot(EquipmentSlotType.OFFHAND), true);
+            player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.OFFHAND));
+        }
+    }
+
+    public static void equipArmor(PlayerEntity player, ItemStack helmet, ItemStack chestplaate, ItemStack leggins, ItemStack boots) {
+        player.setItemSlot(EquipmentSlotType.HEAD, helmet);
+        player.setItemSlot(EquipmentSlotType.CHEST, chestplaate);
+        player.setItemSlot(EquipmentSlotType.LEGS, leggins);
+        player.setItemSlot(EquipmentSlotType.FEET, boots);
+    }
+
+    public static boolean isLegenday(Item item) {
+        return item instanceof Rhitta //PUENTE
+                || item instanceof HolyArmorAmulet //BOLUDO
+                || item.getRegistryName().toString().equals("mahoutsukai:theripper") //LARO
+                || item.getRegistryName().toString().equals("mahoutsukai:weapon_projectile_bow") //ALVARO
+                || item.getRegistryName().toString().equals("mahoutsukai:clarent") //RUBEN
+                || item.getRegistryName().toString().equals("relics:space_dissector") //NATALIA
+                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:exp_sword"); //SERGIO
     }
 }

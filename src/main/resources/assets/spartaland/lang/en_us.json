@@ -1,5 +1,9 @@
 {
   "block.spartaland.ineald_dead": "Ineald",
   "block.spartaland.fertile_dirt": "Tierra Fértil",
-  "block.spartaland.sphere": "?????"
+  "block.spartaland.sphere": "?????",
+  "item.spartaland.holy_armor_head": "Casco Divino",
+  "item.spartaland.holy_armor_chest": "Peto Divino",
+  "item.spartaland.holy_armor_legs": "Grebas Divinas",
+  "item.spartaland.holy_armor_feet": "Botas Divinas"
 }

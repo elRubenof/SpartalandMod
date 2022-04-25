@@ -21,6 +21,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> INEALD_DEAD = registerBlock("ineald_dead", Ineald::new, true);
     public static final RegistryObject<Block> FERTILE_DIRT = registerBlock("fertile_dirt", FertileDirt::new, false);
     public static final RegistryObject<Block> SPHERE = registerBlock("sphere", Sphere::new, true);
+    public static final RegistryObject<Block> FUNKO = registerBlock("funko", Funko::new, true);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, boolean hide) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

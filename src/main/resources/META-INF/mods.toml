@@ -33,7 +33,7 @@ logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
 authors="Boludo´s Company ®" #optional
 # The description text for the mod (multi line!) (#mandatory)
-# description="Mod dedicado a la serie Spartaland 2"
+description="Mod dedicado a la serie Spartaland 2"
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.spartaland]] #optional
     # the modid of the dependency
