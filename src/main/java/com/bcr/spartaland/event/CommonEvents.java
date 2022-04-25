@@ -1,5 +1,6 @@
 package com.bcr.spartaland.event;
 
+import com.bcr.spartaland.Spartaland;
 import com.bcr.spartaland.command.*;
 import com.bcr.spartaland.screen.TpSelectorScreen;
 import com.bcr.spartaland.util.RhittaUtils;
@@ -16,6 +17,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,5 +45,10 @@ public class CommonEvents {
         PlayerEntity player = event.player;
 
         RhittaUtils.checker(player);
+    }
+
+    @SubscribeEvent
+    public static void onDamage(LivingHurtEvent event) {
+        Spartaland.LOGGER.info(event.getAmount());
     }
 }

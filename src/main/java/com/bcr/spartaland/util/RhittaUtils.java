@@ -26,10 +26,6 @@ public class RhittaUtils {
             if (!rhitta) {
                 set(player, true);
                 data.setTargetScale(1.3f);
-
-                if (world.isClientSide()) {
-                    Minecraft.getInstance().player.chat("/morphplayer @p elRubenof_YT");
-                }
             }
             if (rhitta && !rhitta2 && theOne(player)) {
                 set2(player, true);
@@ -44,10 +40,6 @@ public class RhittaUtils {
                 set(player, false);
                 set2(player, false);
                 data.setTargetScale(1.0f);
-
-                if (world.isClientSide()) {
-                    Minecraft.getInstance().player.chat("/demorph");
-                }
             }
         }
 
@@ -56,15 +48,13 @@ public class RhittaUtils {
                 particles(player, world);
             }
 
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 2, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 6, false, false));
             player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1, 2, false, false));
             player.addEffect(new EffectInstance(Effects.JUMP, 1, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.REGENERATION, 1, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.HEALTH_BOOST, 1, 1, false, false));
             player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 1, 0, false, false));
         } else if (rhitta) {
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 3, false, false));
             player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 0, false, false));
             player.addEffect(new EffectInstance(Effects.JUMP, 1, 0, false, false));
             player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 1, 0, false, false));
         }

@@ -29,6 +29,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Objects;
 
 public class Utils {
@@ -70,7 +73,7 @@ public class Utils {
 
     public static void versionChecker(PlayerEvent.PlayerLoggedInEvent event) throws IOException {
         String version = Utils.getVersion();
-        String updateWarn = "Hay una nueva versión del mod " + TextFormatting.GOLD + "Spartaland" + TextFormatting.WHITE + " disponible. Actualízalo para evitar errores.";
+        String updateWarn = "Hay una nueva version del mod " + TextFormatting.GOLD + "Spartaland" + TextFormatting.WHITE + " disponible. Actualizalo para evitar errores.";
 
         if (!version.equals(Spartaland.VERSION)) {
             event.getPlayer().sendMessage(ITextComponent.nullToEmpty(updateWarn), event.getPlayer().getUUID());
@@ -103,6 +106,11 @@ public class Utils {
         player.setItemSlot(EquipmentSlotType.FEET, boots);
     }
 
+    public static boolean isOp(PlayerEntity player) {
+        return player.getStringUUID().equals("380df991-f603-344c-a090-369bad2a924a")
+                || player.getStringUUID().equals("4d17d85a-accc-49ae-9a4f-b6b5a965cf1e");
+    }
+
     public static boolean isLegenday(Item item) {
         return item instanceof Rhitta //PUENTE
                 || item instanceof HolyArmorAmulet //BOLUDO
@@ -110,6 +118,23 @@ public class Utils {
                 || item.getRegistryName().toString().equals("mahoutsukai:weapon_projectile_bow") //ALVARO
                 || item.getRegistryName().toString().equals("mahoutsukai:clarent") //RUBEN
                 || item.getRegistryName().toString().equals("relics:space_dissector") //NATALIA
-                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:exp_sword"); //SERGIO
+                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:exp_sword")
+                || item.getRegistryName().toString().equals("bmorph:metasword"); //MALLAVIA
+    }
+
+    public static Duration time() {
+        LocalDateTime start = LocalDateTime.of(2022, 4, 4, 18, 35);
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("Europe/Madrid"));
+
+        return Duration.between(now, start);
+    }
+
+    public static ITextComponent timer() {
+        Duration time = time();
+        String hours = String.format("%02d", time.toHours());
+        String minutes = String.format("%02d", time.toMinutes() % 60);
+        String seconds = String.format("%02d", time.getSeconds() % 60);
+
+        return ITextComponent.nullToEmpty(TextFormatting.GREEN + "" + TextFormatting.BOLD + "Desastre de mana: " + hours + ":" + minutes + ":" + seconds);
     }
 }

@@ -54,14 +54,12 @@ public class TpSelectorScreen extends Screen {
             this.minecraft.setScreen((Screen)null);
         }));
 
-        if (player.getMainHandItem().getItem().getRegistryName().toString().equals("minecraft:stick")) {
+        if (player.getMainHandItem().getItem().getRegistryName().toString().equals("mahoutsukai:weapon_projectile_bow")) {
             Button xxx = this.addButton(new Button(this.width / 2 - 100, this.height - 40, 200, 20, ITextComponent.nullToEmpty("???"), (p_213021_1_) -> {
                 portal.xxx();
                 this.minecraft.setScreen((Screen)null);
             }));
             xxx.active = TpSelectorUtils.isActive(world, 5);
-        } else {
-            Spartaland.LOGGER.info(player.getMainHandItem().getItem().getRegistryName().toString());
         }
 
         pasarela.active = TpSelectorUtils.isActive(world, 0);
