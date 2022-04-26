@@ -22,9 +22,6 @@ public class ModItems {
     public static final RegistryObject<Item> HOLY_ARMOR_AMULET = ITEMS.register("holy_armor_amulet",
             () -> new HolyArmorAmulet());
 
-    public static final RegistryObject<Item> LIGHTNING_SPEAR = ITEMS.register("lightning_spear",
-            () -> new LightningSpear());
-
     public static final RegistryObject<Item> HOLY_ARMOR_HEAD = reg(new HolyArmorItem(HEAD));
     public static final RegistryObject<Item> HOLY_ARMOR_CHEST = reg(new HolyArmorItem(CHEST));
     public static final RegistryObject<Item> HOLY_ARMOR_LEGS = reg(new HolyArmorItem(LEGS));

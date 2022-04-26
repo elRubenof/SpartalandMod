@@ -16,6 +16,7 @@ import java.util.Objects;
 
 public class HolyArmorItem extends CustomArmorItem {
 
+
     public HolyArmorItem(EquipmentSlotType slot) {
         super("holy_armor", ModArmorMaterial.HOLY, slot);
     }
@@ -35,14 +36,11 @@ public class HolyArmorItem extends CustomArmorItem {
         if (time != 0) {
             if (time > 1) {
                 nbt.putInt(Spartaland.MOD_ID + ":Time", time - 1);
-                Spartaland.LOGGER.info("TIEMPO RESTANTE: " + time);
             } else {
                 player.inventory.removeItem(stack);
-                Spartaland.LOGGER.info("ELIMINADO");
             }
         } else {
-            nbt.putInt(Spartaland.MOD_ID + ":Time", 1200);
-            Spartaland.LOGGER.info("INTRODUCIDO TIEMPO");
+            nbt.putInt(Spartaland.MOD_ID + ":Time", 6000);
         }
 
         stack.setTag(nbt);

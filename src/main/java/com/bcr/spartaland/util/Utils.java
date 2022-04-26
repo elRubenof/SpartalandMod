@@ -82,19 +82,24 @@ public class Utils {
 
     public static void dropArmor(PlayerEntity player, boolean shield) {
         player.drop(player.getItemBySlot(EquipmentSlotType.HEAD), true);
-        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.HEAD));
-
         player.drop(player.getItemBySlot(EquipmentSlotType.CHEST), true);
-        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.CHEST));
-
         player.drop(player.getItemBySlot(EquipmentSlotType.LEGS), true);
-        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.LEGS));
-
         player.drop(player.getItemBySlot(EquipmentSlotType.FEET), true);
-        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.FEET));
 
         if (shield) {
             player.drop(player.getItemBySlot(EquipmentSlotType.OFFHAND), true);
+        }
+
+        removeArmor(player, shield);
+    }
+
+    public static void removeArmor(PlayerEntity player, boolean shield) {
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.HEAD));
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.CHEST));
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.LEGS));
+        player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.FEET));
+
+        if (shield) {
             player.inventory.removeItem(player.getItemBySlot(EquipmentSlotType.OFFHAND));
         }
     }
@@ -118,7 +123,8 @@ public class Utils {
                 || item.getRegistryName().toString().equals("mahoutsukai:weapon_projectile_bow") //ALVARO
                 || item.getRegistryName().toString().equals("mahoutsukai:clarent") //RUBEN
                 || item.getRegistryName().toString().equals("relics:space_dissector") //NATALIA
-                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:exp_sword")
+                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:exp_sword") //SERGIO
+                || item.getRegistryName().toString().equals("villagers_and_mosnetrs_legacy:pink_blade") //CLAUDIA
                 || item.getRegistryName().toString().equals("bmorph:metasword"); //MALLAVIA
     }
 
@@ -136,5 +142,10 @@ public class Utils {
         String seconds = String.format("%02d", time.getSeconds() % 60);
 
         return ITextComponent.nullToEmpty(TextFormatting.GREEN + "" + TextFormatting.BOLD + "Desastre de mana: " + hours + ":" + minutes + ":" + seconds);
+    }
+
+    public static boolean wearHolyArmor(PlayerEntity player) {
+        Item item = player.inventory.armor.get(1).getItem();
+        return item instanceof HolyArmorItem;
     }
 }

@@ -1,0 +1,15 @@
+Java Launcher: /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/bin/java
+Arguments: '--task, SRG_TO_MCP, --input, /Users/ruben/.gradle/caches/modules-2/files-2.1/com.github.Virtuoel/Pehkui/3.1.0-1.16.5-forge/d1bfedcfbb041288c2c1b60d16fa5d036b2e5e44/Pehkui-3.1.0-1.16.5-forge.jar, --output, /Users/ruben/.gradle/caches/forge_gradle/deobf_dependencies/com/github/Virtuoel/Pehkui/3.1.0-1.16.5-forge_mapped_official_1.16.5/Pehkui-3.1.0-1.16.5-forge_mapped_official_1.16.5.jar, --mcp, /Users/ruben/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.16.5/mapping-1.16.5-mapping.zip, --strip-signatures'
+Classpath:
+ - /Users/ruben/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/installertools/1.2.8/installertools-1.2.8-fatjar.jar
+Working directory: /Users/ruben/Development/SpartalandMod/build/_RenameSrg2Mcp_690191777
+Main class: net.minecraftforge.installertools.ConsoleTool
+====================================
+Task: SRG_TO_MCP
+Input:  /Users/ruben/.gradle/caches/modules-2/files-2.1/com.github.Virtuoel/Pehkui/3.1.0-1.16.5-forge/d1bfedcfbb041288c2c1b60d16fa5d036b2e5e44/Pehkui-3.1.0-1.16.5-forge.jar
+Output: /Users/ruben/.gradle/caches/forge_gradle/deobf_dependencies/com/github/Virtuoel/Pehkui/3.1.0-1.16.5-forge_mapped_official_1.16.5/Pehkui-3.1.0-1.16.5-forge_mapped_official_1.16.5.jar
+MCP:    /Users/ruben/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.16.5/mapping-1.16.5-mapping.zip
+Loading MCP Data
+Processing ZIP file
+Stripped Manifest of sha digests
+Process complete
