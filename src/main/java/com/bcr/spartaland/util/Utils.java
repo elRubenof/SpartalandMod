@@ -128,22 +128,6 @@ public class Utils {
                 || item.getRegistryName().toString().equals("bmorph:metasword"); //MALLAVIA
     }
 
-    public static Duration time() {
-        LocalDateTime start = LocalDateTime.of(2022, 4, 4, 18, 35);
-        LocalDateTime now = LocalDateTime.now(ZoneId.of("Europe/Madrid"));
-
-        return Duration.between(now, start);
-    }
-
-    public static ITextComponent timer() {
-        Duration time = time();
-        String hours = String.format("%02d", time.toHours());
-        String minutes = String.format("%02d", time.toMinutes() % 60);
-        String seconds = String.format("%02d", time.getSeconds() % 60);
-
-        return ITextComponent.nullToEmpty(TextFormatting.GREEN + "" + TextFormatting.BOLD + "Desastre de mana: " + hours + ":" + minutes + ":" + seconds);
-    }
-
     public static boolean wearHolyArmor(PlayerEntity player) {
         Item item = player.inventory.armor.get(1).getItem();
         return item instanceof HolyArmorItem;

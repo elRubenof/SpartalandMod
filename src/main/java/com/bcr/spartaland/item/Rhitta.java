@@ -1,16 +1,21 @@
 package com.bcr.spartaland.item;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemTier;
-import net.minecraft.item.ToolItem;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 import java.util.Set;
 
-public class Rhitta extends ToolItem {
-
+public class Rhitta extends AxeItem {
     public Rhitta() {
-        super(4F, -3.0F, ItemTier.NETHERITE, null, new Item.Properties().fireResistant().durability(0));
+        super(ItemTier.NETHERITE, 4F, -3.0F, new Item.Properties().fireResistant().durability(0));
+    }
+
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        return false;
     }
 }

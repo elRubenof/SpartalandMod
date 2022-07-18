@@ -30,6 +30,7 @@ public class ServerEvents {
             if (nbt.hasUUID(Spartaland.MOD_ID + ":Owner")) {
                 if(!nbt.getUUID(Spartaland.MOD_ID + ":Owner").equals(player.getUUID())) {
                     player.drop(stack, true);
+                    player.inventory.removeItem(stack);
                 }
             }
         }

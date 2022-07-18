@@ -56,11 +56,16 @@ public class CommonEvents {
         if (Utils.wearHolyArmor(player) && !armor) {
             player.getPersistentData().putBoolean(Spartaland.MOD_ID + ":Armor", true);
             if (player.level.isClientSide()) {
-                Minecraft.getInstance().player.chat("/ceffect give Dev minecraft:bad_omen 300");
+                Minecraft.getInstance().player.chat("/ceffect give " + player.getScoreboardName() + " mahoutsukai:borrowed_authority 3600");
             }
         }
         if (!Utils.wearHolyArmor(player) && armor) {
             player.getPersistentData().putBoolean(Spartaland.MOD_ID + ":Armor", false);
+
+            if (player.level.isClientSide()) {
+                Minecraft.getInstance().player.chat("/ceffect clear");
+            }
+
             player.inventory.add(ModItems.HOLY_ARMOR_AMULET.get().getDefaultInstance());
             player.kill();
         }

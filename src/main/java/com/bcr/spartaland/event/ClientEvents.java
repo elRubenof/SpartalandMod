@@ -77,19 +77,6 @@ public class ClientEvents {
                         event.setCanceled(true);
                     }
                 }
-            } else {
-                System.out.println("pepe");
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.gameMode.getPlayerMode().equals(GameType.SPECTATOR)) {
-            if (!mc.player.getUUID().equals("4d17d85a-accc-49ae-9a4f-b6b5a965cf1e") && !mc.player.getUUID().equals("0392eb6d-e7b2-4dd6-9aea-4658b6bf03e2")) {
-                mc.mouseHandler.releaseMouse();
-                KeyBinding.releaseAll();
             }
         }
     }

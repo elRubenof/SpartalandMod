@@ -22,7 +22,7 @@ public class RhittaUtils {
         boolean handed = hasRhitta(player);
         World world = player.level;
 
-        if (handed && world.isDay() && !world.isRaining() && !world.isThundering()) {
+        if (handed && world.isDay() && !world.isRaining() && !world.isThundering() && !world.isClientSide()) {
             if (!rhitta) {
                 set(player, true);
                 data.setTargetScale(1.3f);
@@ -44,23 +44,23 @@ public class RhittaUtils {
         }
 
         if (rhitta2) {
-            if (world.isClientSide()) {
-                particles(player, world);
-            }
-
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 6, false, false));
-            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1, 2, false, false));
-            player.addEffect(new EffectInstance(Effects.JUMP, 1, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 1, 0, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 15, 6, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 15, 2, false, false));
+            player.addEffect(new EffectInstance(Effects.JUMP, 15, 1, false, false));
+            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 15, 0, false, false));
         } else if (rhitta) {
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 1, 3, false, false));
-            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.JUMP, 1, 0, false, false));
-            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 1, 0, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 15, 3, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 15, 1, false, false));
+            player.addEffect(new EffectInstance(Effects.JUMP, 15, 0, false, false));
+            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 15, 0, false, false));
         }
 
         if (rhitta) {
             Utils.dropArmor(player, true);
+        }
+
+        if (handed && theOne(player) && world.isClientSide()) {
+            particles(player, world);
         }
     }
 
